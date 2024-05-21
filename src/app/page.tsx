@@ -4,7 +4,7 @@ import { HeadTitle } from '@/components/HeadTitle';
 export default function Home() {
   return (
     <main className="text-black">
-      <HeadTitle text='Explore our meals categories' />
+      <HeadTitle text='Explore our meals categories' className='mb-4' />
       <Card/>
     </main>
   );
