@@ -1,6 +1,6 @@
 
 export const Card = () => {
-    return <div className="w-[400px] h-[200px] bg-red-500">
+    return <div className="w-[400px] h-[200px] rounded-lg box-shadow">
 
     </div>
 }
