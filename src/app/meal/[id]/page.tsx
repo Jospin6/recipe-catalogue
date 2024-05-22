@@ -26,12 +26,12 @@ export default function mail({ params }: { params: { id: string } }) {
         <div className="col-span-2">
             <Card
                 className='w-full h-[500px]'
-                src={meal[0].strMealThumb}
-                title={meal[0].strMeal} />
+                src={meal[0]?.strMealThumb}
+                title={meal[0]?.strMeal} />
         </div>
         <div className="col-span-2">
             <div className="w-full border-b-[1px] border-gray-200">
-                <HeadTitle text={meal[0].strCategory} className="" />
+                <HeadTitle text={meal[0]?.strCategory} className="" />
             </div>
         </div>
     </div>
