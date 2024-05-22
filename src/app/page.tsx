@@ -1,3 +1,4 @@
+"use client"
 import { Card } from '@/components/Card'
 import { HeadTitle } from '@/components/HeadTitle';
 import { fetchCategories } from '@/features/categoriesSlice';
@@ -14,7 +15,7 @@ export default function Home() {
   }, [dispatch])
 
   const shouldComponentRender = () => {
-    if (loading === true || categories.length === 0) return false;
+    if (loading === true) return false;
     return true;
   }
 
@@ -26,10 +27,10 @@ export default function Home() {
     <main className="text-black">
       <HeadTitle text='Explore our meals categories' className='mb-4' />
       <div className="md:grid md:grid-cols-6 md:gap-4">
-        {categories.map(category => (
-          <Link href={`/category/${category.strCategory}`}>
+        {categories.map((category, key )=> (
+          <Link href={`/category/${category.strCategory}`} className='col-span-2' key={key}>
             <Card 
-              className='col-span-2 h-[300px]' 
+              className='h-[300px]' 
               src={category.strCategoryThumb} 
               title={category.strCategory} />
           </Link>))
