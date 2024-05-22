@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 
 interface initialState {
     loading: boolean,
-    categories: string[],
+    categories: any[],
     error: string | null
 }
 

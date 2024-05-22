@@ -4,7 +4,7 @@ import { HeadTitle } from "@/components/HeadTitle";
 export default function mail() {
     return <div className="md:grid md:grid-cols-4 md:gap-4">
         <div className="col-span-2">
-            <Card className='w-full h-[500px]'/>
+            {/* <Card className='w-full h-[500px]'/> */}
         </div>
         <div className="col-span-2">
             <div className="w-full border-b-[1px] border-gray-200">
