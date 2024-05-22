@@ -13,7 +13,7 @@ export default function mail({ params }: { params: { id: string } }) {
         dispatch(fetchMeal(params.id))
     }, [dispatch])
 
-    const shouldComponentRender = () => {
+    const shouldComponentRender = (): boolean => {
         if (loading === true) return false;
         return true;
     }

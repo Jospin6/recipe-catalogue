@@ -14,7 +14,7 @@ export default function Home() {
     dispatch(fetchCategories())
   }, [dispatch])
 
-  const shouldComponentRender = () => {
+  const shouldComponentRender = (): boolean => {
     if (loading === true) return false;
     return true;
   }
