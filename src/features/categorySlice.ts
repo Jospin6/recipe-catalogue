@@ -14,7 +14,7 @@ const initialState: initialState = {
 
 export const fetchCategory = createAsyncThunk("category/fetchCategory", async (term: string) =>{
     return await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${term}`)
-        .then(response => response)
+        .then(response => response.json())
         .then(data => data)
         .catch(error => error.message)
 })
