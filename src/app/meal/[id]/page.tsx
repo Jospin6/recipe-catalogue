@@ -3,6 +3,7 @@ import { Card } from "@/components/Card";
 import { HeadTitle } from "@/components/HeadTitle";
 import { fetchMeal } from "@/features/mealsSlice";
 import { AppDispatch, RootState } from "@/features/store";
+import { getIngredient } from "@/helpers";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -22,6 +23,8 @@ export default function mail({ params }: { params: { id: string } }) {
         return (<div>LOADING...</div>);
     }
 
+    const intredients = getIngredient(meal)
+
     return <div className="md:grid md:grid-cols-4 md:gap-4">
         <div className="col-span-2">
             <Card
@@ -32,6 +35,18 @@ export default function mail({ params }: { params: { id: string } }) {
         <div className="col-span-2">
             <div className="w-full border-b-[1px] border-gray-200">
                 <HeadTitle text={meal[0]?.strCategory} className="" />
+            </div>
+            <div className="w-full pb-4 border-b-[1px] border-gray-200">
+                <div className="my-4 text-xl">Ingredients</div>
+                <div className="w-full flex flex-wrap">
+                    { intredients.map(
+                        ingredient => (
+                            <span className="mr-2 p-[10px] mb-2 rounded-lg box-shadow">
+                                {ingredient}
+                            </span>
+                        )) 
+                    }
+                </div>
             </div>
         </div>
     </div>
