@@ -23,7 +23,7 @@ export default function RootLayout({
           <header>
             <Navbar/>
           </header>
-          <div className='md:w-[80%] md:m-[auto]'>
+          <div className='md:w-[80%] md:m-[auto] px-2'>
             {children}
           </div>
         </ReduxProvider>
