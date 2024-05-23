@@ -4,7 +4,7 @@ import { HeadTitle } from "@/components/HeadTitle";
 import { fetchMeal } from "@/features/mealsSlice";
 import { AppDispatch, RootState } from "@/features/store";
 import { getIngredient } from "@/helpers";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function mail({ params }: { params: { id: string } }) {
@@ -46,6 +46,13 @@ export default function mail({ params }: { params: { id: string } }) {
                             </span>
                         )) 
                     }
+                </div>
+            </div>
+
+            <div className="w-full pb-4 border-b-[1px] border-gray-200">
+                <div className="my-4 text-xl">Cooking Process</div>
+                <div className={`w-full flex flex-wrap`}>
+                    { meal[0]?.strInstructions }
                 </div>
             </div>
         </div>
