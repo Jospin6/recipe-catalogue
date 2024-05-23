@@ -41,7 +41,7 @@ export default function mail({ params }: { params: { id: string } }) {
                 <div className="w-full flex flex-wrap">
                     { intredients.map(
                         ingredient => (
-                            <span className="mr-2 p-[10px] mb-2 rounded-lg box-shadow">
+                            <span className="mr-2 p-[10px] mb-2 rounded-lg box-shadow" key={ingredient}>
                                 {ingredient}
                             </span>
                         )) 
