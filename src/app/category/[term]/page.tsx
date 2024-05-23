@@ -25,7 +25,7 @@ export default function Category({ params }: { params: { term: string } }) {
   }
 
   return <div className="text-2xl">
-    <HeadTitle text="Selected category" className="mb-4" />
+    <HeadTitle text={params.term} className="mb-4" />
     <div className="md:grid md:grid-cols-6 md:gap-4">
       {category.map((meal, key) => (
         <Link href={`/meal/${meal.idMeal}`} className='col-span-2' key={key}>
