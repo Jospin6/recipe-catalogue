@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ReduxProvider>
           <header>
-            <Navbar />
+            <Navbar/>
           </header>
           <div className='md:w-[80%] md:m-[auto]'>
             {children}
