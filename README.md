@@ -3,13 +3,19 @@
 #### The application is a recipes catalogue it uses TheMealDB Api to get the data and has three main pages.
 <hr />
 
-> The home page is a list of films and tv show from which you can select a specific to see the details of the film.
+> The home page is a list of the available categories from which you can select a specific category to see the differents recipes for that category.
 
 ![screenshot](./home.png)
 
 <hr />
 
-> The details page it basically provide the details about a specific film.
+> The category page is a list of the differents recipes within a specific category from which you can select a recipe to see the details it also have a category filter which allow you to easily filter the recipes.
+
+![screenshot](./category.png)
+
+<hr />
+
+> The details page is the last and it basically provide the details about a specific recipe.
 
 ![screenshot](./details.png)
 
@@ -17,8 +23,10 @@
 
 ## Built With
 
-- javaScript
+- typescript
 - React
+- NextJs
+- Postman
 - TMDB
 - Redux
 - Node js
@@ -34,7 +42,7 @@ Here are the steps to follow in order to get this project on your local computer
 
 ### Prerequisites
 
-`node v18.15.0 +`
+`node v20.13.1 +`
 
 `npm v9.5.0 +`
 
@@ -48,11 +56,11 @@ install the dependacies by typing `npm install`
 
 ### Usage
 
-start the local server by running `npm start`
+start the local server by running `npm run start`
 
 ### Deployment
 
-this project is deployed on heroku
+this project is deployed on Netlify
 
 to get the deployment build of the code run `npm run build`
 
