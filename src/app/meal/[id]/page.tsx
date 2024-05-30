@@ -1,6 +1,7 @@
 "use client"
 import { Card } from "@/components/Card";
 import { HeadTitle } from "@/components/HeadTitle";
+import { Spiner } from "@/components/Spiner";
 import { fetchMeal } from "@/features/mealsSlice";
 import { AppDispatch, RootState } from "@/features/store";
 import { getIngredient } from "@/helpers";
@@ -20,7 +21,7 @@ export default function mail({ params }: { params: { id: string } }) {
     }
 
     if (!shouldComponentRender()) {
-        return (<div>LOADING...</div>);
+        return (<Spiner/>);
     }
 
     const intredients = getIngredient(meal)

@@ -1,6 +1,7 @@
 "use client"
 import { Card } from "@/components/Card";
 import { HeadTitle } from "@/components/HeadTitle";
+import { Spiner } from "@/components/Spiner";
 import { fetchCategory } from "@/features/categorySlice";
 import { AppDispatch, RootState } from "@/features/store";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export default function Category({ params }: { params: { term: string } }) {
   }
 
   if (!shouldComponentRender()) {
-    return (<div>LOADING...</div>);
+    return (<Spiner/>);
   }
 
   return <div className="text-2xl">

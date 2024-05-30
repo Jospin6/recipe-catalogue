@@ -1,6 +1,7 @@
 "use client"
 import { Card } from '@/components/Card'
 import { HeadTitle } from '@/components/HeadTitle';
+import { Spiner } from '@/components/Spiner';
 import { fetchCategories } from '@/features/categoriesSlice';
 import { AppDispatch, RootState } from '@/features/store';
 import Link from 'next/link';
@@ -20,7 +21,7 @@ export default function Home() {
   }
 
   if (!shouldComponentRender()) {
-    return (<div>LOADING...</div>);
+    return (<Spiner/>);
   }
 
   return (
