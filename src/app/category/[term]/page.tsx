@@ -7,7 +7,7 @@ import { AppDispatch, RootState } from "@/features/store";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 type Props = {
   params: {
