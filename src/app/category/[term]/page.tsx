@@ -7,8 +7,21 @@ import { AppDispatch, RootState } from "@/features/store";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Metadata } from "next";
 
-export default function Category({ params }: { params: { term: string } }) {
+type Props = {
+  params: {
+    term: string
+  }
+}
+
+export const generateMetadata = ({params}: Props): Metadata =>{
+    return {
+      title: `${params.term} - recipes`
+    }
+}
+
+export default function Category({ params }: Props) {
   const { loading, category } = useSelector((state: RootState) => state.category)
   const dispatch = useDispatch<AppDispatch>()
 
