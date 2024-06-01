@@ -27,7 +27,7 @@
 - React
 - NextJs
 - Postman
-- TMDB
+- TheMealDB Api
 - Redux
 - Node js
 - Netlify
