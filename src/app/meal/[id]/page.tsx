@@ -5,7 +5,7 @@ import { Spiner } from "@/components/Spiner";
 import { fetchMeal } from "@/features/mealsSlice";
 import { AppDispatch, RootState } from "@/features/store";
 import { getIngredient } from "@/helpers";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export const metadata = {
