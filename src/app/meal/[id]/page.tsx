@@ -7,8 +7,9 @@ import { AppDispatch, RootState } from "@/features/store";
 import { getIngredient } from "@/helpers";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "meal-recipe",
 }
 
