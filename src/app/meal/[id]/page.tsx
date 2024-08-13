@@ -8,7 +8,7 @@ import { getIngredient } from "@/helpers";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function mail({ params }: { params: { id: string } }) {
+export default function Meal({ params }: { params: { id: string } }) {
     const { loading, meal } = useSelector((state: RootState) => state.meals)
     const dispatch = useDispatch<AppDispatch>()
     useEffect(() => {
