@@ -7,11 +7,6 @@ import { AppDispatch, RootState } from "@/features/store";
 import { getIngredient } from "@/helpers";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "meal-recipe",
-}
 
 export default function mail({ params }: { params: { id: string } }) {
     const { loading, meal } = useSelector((state: RootState) => state.meals)
