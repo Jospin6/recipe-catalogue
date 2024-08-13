@@ -13,7 +13,7 @@ export default function mail({ params }: { params: { id: string } }) {
     const dispatch = useDispatch<AppDispatch>()
     useEffect(() => {
         dispatch(fetchMeal(params.id))
-    }, [dispatch])
+    }, [params.id])
 
     const shouldComponentRender = (): boolean => {
         if (loading === true) return false;

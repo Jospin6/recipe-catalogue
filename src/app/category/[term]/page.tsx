@@ -20,7 +20,7 @@ export default function Category({ params }: Props) {
 
   useEffect(() => {
     dispatch(fetchCategory(params.term))
-  }, [dispatch])
+  }, [params.term])
 
   const shouldComponentRender = (): boolean => {
     if (loading === true) return false;
